@@ -14,17 +14,17 @@ public class Customer {
     private int lenght; //tiempo de trabajo
     private int revenue; //dinero que gana la tienda por atenderlo
     private int id; //id del cliente
-    private int arrivalTime;//tiempo de llegada a la tienda
+    private double arrivalTime;//tiempo de llegada a la tienda
     
 
-    public Customer(int lenght, int revenue, int id, int arrivalTime) {
+    public Customer(int lenght, int revenue, int id, double arrivalTime) {
         this.lenght = lenght;
         this.revenue = revenue;
         this.id = id;
         this.arrivalTime = arrivalTime;
     }
 
-    public int getArrivalTime() {
+    public double getArrivalTime() {
         return arrivalTime;
     }
 

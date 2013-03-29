@@ -14,7 +14,7 @@ public class Server {
 
     //Cola de gente esperando al servidor
     ConcurrentLinkedQueue<Customer> customers = new ConcurrentLinkedQueue<>();
-    int totalWaits;
+    double totalWaits;
     int totalRevenue;
     int numCustomers;
     Customer activeCustomer;
@@ -58,11 +58,11 @@ public class Server {
         this.totalRevenue = totalRevenue;
     }
 
-    public int getTotalWaits() {
+    public double getTotalWaits() {
         return totalWaits;
     }
 
-    public void setTotalWaits(int totalWaits) {
+    public void setTotalWaits(double totalWaits) {
         this.totalWaits = totalWaits;
     }
 }

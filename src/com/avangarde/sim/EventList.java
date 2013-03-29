@@ -13,19 +13,19 @@ import java.util.ArrayList;
 public class EventList {
 
     int numServers;
-    ArrayList<Integer> finishTime = new ArrayList<Integer>(); //tiempo de finalizacion
+    ArrayList<Double> finishTime = new ArrayList<Double>(); //tiempo de finalizacion
 
-    int nextEventTime(int server) {
+    double nextEventTime(int server) {
         return finishTime.get(server);
     }
 
-    void setFinishTime(int server, int time) {
+    void setFinishTime(int server, double time) {
         finishTime.add(server, time);
     }
 
     int nextEventServer() {
         int p = 0;
-        int t = finishTime.get(0);
+        double t = finishTime.get(0);
         for (int i = 1; i < numServers; i++) {
             if (finishTime.get(i) < t) {
                 p = i;
@@ -35,7 +35,7 @@ public class EventList {
         return p;
     }
 
-    public EventList(int theNumServers, int largeTime) {
+    public EventList(int theNumServers, double largeTime) {
 
         if (theNumServers < 1) {
             System.out.println("Error");
@@ -44,7 +44,7 @@ public class EventList {
         this.numServers = theNumServers;
         for (int i = 1; i <= numServers; i++) {
             finishTime.add(largeTime);
-            
+
         }
     }
 }
