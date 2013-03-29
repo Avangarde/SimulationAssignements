@@ -29,15 +29,7 @@ package com.avangarde.sim;
  * @author zergio
  */
 
-public class Customer(){
-    
-    public double revenue;//Valor que retorna a la empreza
-    
 
-    public Customer() {
-    }
-    
-}
 public class multipleServiceOneServerQueue {
     
     double iat; //Tiempo entre llegadas
